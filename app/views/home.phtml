@@ -1,0 +1,29 @@
+{% extends "layouts/master.phtml" %}
+
+{% block title %}Todo Application{% endblock %}
+
+{% block content %}
+
+    <h3>Mew Task</h3>
+    <form action="/todo" method="POST" role="form">
+        
+         <div class="form-group">
+            <label for="newTask">Task</label>
+            <input type="text" class="form-control" id="newTask" name="task" placeholder="Do the dishes">
+        </div>
+        <button type="submit" class="btn btn-primary pull-right">Create</button>
+
+    </form>
+    
+    <br>
+    <hr class="clearfix">
+
+
+    <h3>Tasks</h3>
+    <div class="list-group">
+        {% for todo in todos %}
+            <a href="#" class="list-group-item">{{ todo.task|e }}</a>
+        {% endfor %}
+    </div>
+
+{% endblock %}

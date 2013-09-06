@@ -1,0 +1,13 @@
+{
+    "autoload": {
+        "classmap": [
+            "app/controllers",
+            "app/models"
+        ]
+    },
+    "require": {
+        "axxim/frame": "dev-master",
+        "twig/twig": "1.*",
+        "illuminate/database": "*",
+    }
+}
